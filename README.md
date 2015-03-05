@@ -1,31 +1,11 @@
 # CsvTool
 
-TODO: Write a gem description
 
-## Installation
-
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'csv_tool'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install csv_tool
+## Setup
+1. Clone this repo
+2. Run `bundle install` inside it
 
 ## Usage
+In this repo:
 
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/csv_tool/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+`bundle exec ./bin/csv_tool help`
