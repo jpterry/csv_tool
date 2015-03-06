@@ -45,9 +45,10 @@ module CsvTool
         @copy_headers = copy_headers
 
         @filename = filename
+        @outfile_basename = outfile_basename
         @header = nil
         @file_count = 1
-        @outfile = File.open("split_out_#{@file_count}.csv", 'wb')
+        @outfile = File.open("#{@outfile_basename}_#{@file_count}.csv", 'wb')
       end
 
 
@@ -68,7 +69,7 @@ module CsvTool
       def start_new_file
         puts "Closing #{@outfile.path}"
         @outfile.close
-        @outfile = File.open("split_out_#{@file_count+=1}.csv", 'wb')
+        @outfile = File.open("#{@outfile_basename}_#{@file_count+=1}.csv", 'wb')
         puts "Starting #{@outfile.path}"
         @outfile << @header.to_csv if @copy_headers
       end
